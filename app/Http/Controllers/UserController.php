@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Redirect;
 
 class UserController extends Controller
 {
@@ -45,7 +46,7 @@ class UserController extends Controller
      */
     public function edit(User $user)
     {
-        return view('profile.edit', [
+        return view('users.edit', [
             'user' => $user,
         ]);
     }
@@ -55,7 +56,15 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $user = User::find($id);
+
+        $user->name = $request->name;
+        $user->email = $request->email;
+
+        $user->save();
+
+
+        return Redirect::route('users.edit', $user->id)->with('status', 'profile-updated');
     }
 
     /**
