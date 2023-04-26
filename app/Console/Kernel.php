@@ -12,7 +12,8 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule): void
     {
-        // $schedule->command('inspire')->hourly();
+        // Se agrega CRON para enviar diario a las 09:00 AM, el correo de cumpleaños al usuario.
+        $schedule->command('send:birthday-emails')->dailyAt('9:00');
     }
 
     /**
