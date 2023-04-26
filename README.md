@@ -4,6 +4,12 @@ Para instalación:
 - npm install && npm run dev
 
 
+Usuario y contraseña:
+
+- admin@admin.com
+- password
+
+
 
 
 Prueba para Desarrollador Backend Sr en EIIMT.
