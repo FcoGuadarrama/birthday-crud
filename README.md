@@ -11,7 +11,4 @@ Usuario y contraseña:
 
 
 
-
-Prueba para Desarrollador Backend Sr en EIIMT.
-
 Francisco Guadarrama Coronado.
